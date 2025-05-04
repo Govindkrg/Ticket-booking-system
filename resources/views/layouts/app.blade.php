@@ -6,11 +6,12 @@
     <title>Ticket Booking System - @yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
 
     @stack('styles')
 </head>
 <body>
-    <nav class="navbar" style="background-color: #343a40; color: white; padding: 10px;">
+    <nav class="navbar mynav">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
             <div style="display: flex; align-items: center;">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
