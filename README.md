@@ -113,16 +113,23 @@ ticket-booking-system/
   - Parameters: `event_id`
   - Returns: JSON response with success status
 ## Screenshots :
-screenshots:
-welcome page 
- <img src="{{ asset('images/screenshots/welcomepage.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
-Login page 
- <img src="{{ asset('images/screenshots/login.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
- Register page 
- <img src="{{ asset('images/screenshots/register.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
- Dashboard After Login page 
- <img src="{{ asset('images/screenshots/dashboard.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
- events page 
- <img src="{{ asset('images/screenshots/events.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
- History page 
- <img src="{{ asset('images/screenshots/history.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+## Screenshots
+
+### Welcome Page  
+![Welcome Page](public/images/screenshots/welcomepage.png)
+
+### Login Page  
+![Login Page](public/images/screenshots/login.png)
+
+### Register Page  
+![Register Page](public/images/screenshots/register.png)
+
+### Dashboard After Login  
+![Dashboard](public/images/screenshots/dashboard.png)
+
+### Events Page  
+![Events](public/images/screenshots/events.png)
+
+### Booking History Page  
+![History](public/images/screenshots/history.png)
+
