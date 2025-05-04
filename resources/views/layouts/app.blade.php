@@ -10,25 +10,38 @@
     @stack('styles')
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('events.index') }}">Ticket Booking System</a>
-            <div class="navbar-nav">
+    <nav class="navbar" style="background-color: #343a40; color: white; padding: 10px;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center;">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+                <a href="{{ route('events.index') }}" style="color: white; font-weight: bold; text-decoration: none;">Ticket Booking System</a>
+            </div>
+
+            <!-- Hamburger button -->
+            <button onclick="toggleMenu()" style="background: none; border: none; color: white; font-size: 24px; display: none;" id="hamburger">
+                &#9776;
+            </button>
+
+            <!-- Nav links -->
+            <div id="navMenu" style="display: flex; flex-direction: row; gap: 15px; flex-wrap: wrap;">
                 @auth
-                    <span class="nav-item nav-link">Welcome, {{ Auth::user()->name }}</span>
-                    <a class="nav-item nav-link" href="{{ route('events.index') }}">Events</a>
-                    <a class="nav-item nav-link" href="{{ route('bookings.index') }}">My Bookings</a>
-                    <form action="{{ route('logout') }}" method="POST" class="nav-item">
+                    <span style="color: white;">Welcome, {{ Auth::user()->name }}</span>
+                    <a href="{{ route('events.index') }}" style="color: white; text-decoration: none;">Events</a>
+                    <a href="{{ route('bookings.index') }}" style="color: white; text-decoration: none;">My Bookings</a>
+                    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                         @csrf
-                        <button type="submit" class="nav-link btn btn-link">Logout</button>
+                        <button type="submit" style="background: none; border: none; color: white; text-decoration: underline; cursor: pointer;">Logout</button>
                     </form>
                 @else
-                    <a class="nav-item nav-link" href="{{ route('login') }}">Login</a>
-                    <a class="nav-item nav-link" href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('login') }}" style="color: white; text-decoration: none;">Login</a>
+                    <a href="{{ route('register') }}" style="color: white; text-decoration: none;">Register</a>
                 @endauth
             </div>
         </div>
     </nav>
+
+
+
 
     <div class="container mt-4">
         @if(session('success'))
@@ -59,6 +72,37 @@
           Contact Us
         </a>
       </footer>
+      <script>
+        function toggleMenu() {
+            const menu = document.getElementById("navMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+                menu.style.flexDirection = "column";
+                menu.style.gap = "10px";
+                menu.style.marginTop = "10px";
+            }
+        }
 
+
+        function checkWidth() {
+            const w = window.innerWidth;
+            const menu = document.getElementById("navMenu");
+            const hamburger = document.getElementById("hamburger");
+
+            if (w <= 768) {
+                hamburger.style.display = "block";
+                menu.style.display = "none";
+            } else {
+                hamburger.style.display = "none";
+                menu.style.display = "flex";
+                menu.style.flexDirection = "row";
+            }
+        }
+
+        window.addEventListener("resize", checkWidth);
+        window.addEventListener("load", checkWidth);
+    </script>
 </body>
 </html>
