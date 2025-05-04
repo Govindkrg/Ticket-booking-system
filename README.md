@@ -112,3 +112,17 @@ ticket-booking-system/
 - `POST /bookings` - Book a ticket (requires authentication)
   - Parameters: `event_id`
   - Returns: JSON response with success status
+## Screenshots :
+screenshots:
+welcome page 
+ <img src="{{ asset('images/screenshots/welcomepage.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+Login page 
+ <img src="{{ asset('images/screenshots/login.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+ Register page 
+ <img src="{{ asset('images/screenshots/register.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+ Dashboard After Login page 
+ <img src="{{ asset('images/screenshots/dashboard.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+ events page 
+ <img src="{{ asset('images/screenshots/events.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
+ History page 
+ <img src="{{ asset('images/screenshots/history.png') }}" alt="Logo" style="width: 100px; height: 65px; margin-right: 10px;">
